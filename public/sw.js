@@ -1,8 +1,8 @@
 const cacheName = "v1";
-const cacheAssets = ["index.html", "/js/index.js"];
+const offline = "/offline.html";
 
 self.addEventListener("install", (e) => {
-  console.log("sw installed !");
+  console.log("[Service Worker] Install");
   e.waitUntil(
     caches
       .open(cacheName)
@@ -11,11 +11,11 @@ self.addEventListener("install", (e) => {
   );
 });
 
-self.addEventListener("fecth", (e) => {
-  console.log("sw fetching !");
+self.addEventListener("fetch", (e) => {
+  console.log("[Service Worker] Fetched resource " + e.request.url);
   e.respondWith(
-    caches.match(e.request).then((response) => {
-      return response || fetch(response);
+    caches.match(offline).then((response) => {
+      return response || fetch(e.request);
     })
   );
 });
