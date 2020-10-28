@@ -3,48 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Simple Piano">
-  <link rel="apple-touch-icon" href="touch-icon-iphone.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png"> 
-  <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png"> 
-  <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
-  <link rel="apple-touch-icon" href="/images/icons/black-icon-64x64.png">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/images/icon-192x192.png" />
+  <meta name="apple-mobile-web-app-title" content="PWA Example" />
+  <meta name="description" content="PWA Example" />
+  <meta name="theme-color" content="#2b2b2b" />
   <link rel="stylesheet" type="text/css" href="./css/index.css">
-  <title>Simple Piano</title>
+  <link rel="manifest" href="/manifest.json">
+  <title>PWA Example</title>
 </head>
 
 <body>
-  <div class="piano">
-    <h1>Simple Piano</h1>
-    <ul class="keys">
-      <li data-key="do" class="key"><span class="sound">do</span></li>
-      <li data-key="re" class="key"><span class="sound">re</span></li>
-      <li data-key="mi" class="key"><span class="sound">mi</span></li>
-      <li data-key="fa" class="key"><span class="sound">fa</span></li>
-      <li data-key="sol" class="key"><span class="sound">sol</span></li>
-      <li data-key="la" class="key"><span class="sound">la</span></li>
-      <li data-key="si" class="key"><span class="sound">si</span></li>
-      <li data-key="do#" class="key"><span class="sound">do#</span></li>
-    </ul>
-
-    <audio data-key="do" src="https://freesound.org/data/previews/392/392398_7397136-lq.mp3"></audio>
-    <audio data-key="re" src="https://freesound.org/data/previews/392/392402_7397136-lq.mp3"></audio>
-    <audio data-key="mi" src="https://freesound.org/data/previews/392/392403_7397136-lq.mp3"></audio>
-    <audio data-key="fa" src="https://freesound.org/data/previews/392/392397_7397136-lq.mp3"></audio>
-    <audio data-key="sol" src="https://freesound.org/data/previews/392/392400_7397136-lq.mp3"></audio>
-    <audio data-key="la" src="https://freesound.org/data/previews/392/392396_7397136-lq.mp3"></audio>
-    <audio data-key="si" src="https://freesound.org/data/previews/392/392401_7397136-lq.mp3"></audio>
-    <audio data-key="do#" src="https://freesound.org/data/previews/392/392399_7397136-lq.mp3"></audio>
-  </div>
-  <script type="text/javascript" src="./scripts/app.js"></script>
-
-  <div class="creator-icon">
-    아이콘 제작자 <a href="https://www.flaticon.com/kr/authors/freepik" title="Freepik">Freepik</a> from www.flaticon.com</a>
-  </div>
+  <h1> Hello PWA ! </h1>
+  <script type="text/javascript" src="./js/index.js"></script>
 </body>
 
 </html>
