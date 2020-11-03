@@ -1,5 +1,5 @@
 const cacheVersion = "v1";
-const cachefiles = ["/offline.html", "/images/icon-192x192.png"];
+const cachefiles = ["/offline.html", "/images/image.jpeg"];
 
 self.addEventListener("install", (e) => {
   console.log("[Service Worker] Install");
