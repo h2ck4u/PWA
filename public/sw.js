@@ -1,22 +1,10 @@
 const cacheVersion = "v1";
-const cachefiles = ["/offline.html"];
+const cachefiles = ["/offline.html", "/images/icon-192x192.png"];
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(
-    caches
-      .open(cacheVersion)
-      .then(cache.addAll(cachefiles))
-      .then(() => self.skipWaiting())
-  );
+  console.log("[Service Worker] Install");
 });
 
 self.addEventListener("fetch", (e) => {
-  e.respondWith(
-    caches
-      .match(e.request)
-      .then(reponse || fetch(e.request))
-      .catch(
-        caches.open(cacheVersion).then((cache) => cache.match("offlien.html"))
-      )
-  );
+  console.log("[Service Worker] Fetched resource");
 });

@@ -15,7 +15,7 @@ self.addEventListener("fetch", (e) => {
       .match(e.request)
       .then((response) => response || fetch(e.request))
       .catch((e) =>
-        caches.open(cacheName).then((cache) => cache.match("/offline.html"))
+        caches.open(cacheVersion).then((cache) => cache.match("/offline.html"))
       )
   );
 });
